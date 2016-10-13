@@ -1,0 +1,13 @@
+sudo:
+  - required
+language:
+  - bash
+services:
+  - docker
+
+install:
+  - git clone https://github.com/ethnchao/docker-cobbler.git ~/docker-cobbler
+
+script:
+  - cd ~/docker-cobbler && docker build -t cobbler .
+
