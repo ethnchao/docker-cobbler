@@ -10,9 +10,7 @@ RUN rm -f /lib/systemd/system/multi-user.target.wants/* \
     && rm -f /lib/systemd/system/basic.target.wants/* \
     && rm -f /lib/systemd/system/anaconda.target.wants/*
 
-RUN curl http://mirrors.aliyun.com/repo/epel-7.repo -o /etc/yum.repos.d/epel.repo \
-    && mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak \
-    && curl http://mirrors.aliyun.com/repo/Centos-7.repo -o /etc/yum.repos.d/CentOS-Base.repo \
+RUN yum -y install epel-release \
     && yum -y install \
         cobbler \
         cobbler-web \

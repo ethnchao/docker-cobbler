@@ -1,8 +1,11 @@
 # docker-cobbler (Last version 2.6.11) 
 
-[![](http://cobbler.github.io/images/logo-brand.png)](http://cobbler.github.io/ "cobbler")
+[![](https://cobbler.github.io/images/logo-brand.png)](http://cobbler.github.io/ "cobbler")
 
 ### Last Update: 30/09/2016. Put everything there.
+
+Build Status: 
+[![Build Status](https://api.travis-ci.org/ethnchao/docker-cobbler.svg?branch=master)](https://travis-ci.org/ethnchao/docker-cobbler)
 
 ### Cobbler
 Cobbler is a build and deployment system. The primary functionality of cobbler is to simplify the lives of administrators by automating repetive actions, and to encourage reuse of existing work through the use of templating.
