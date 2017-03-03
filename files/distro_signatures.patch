@@ -8,7 +8,7 @@
 +   "xenial": {
 +    "signatures":["dists", ".disk"],
 +    "version_file":"Release|mini-info",
-+    "version_file_regex":"Codename: xenial|Ubuntu 16.04",
++    "version_file_regex":"Codename: xenial|Ubuntu 16",
 +    "kernel_arch":"linux-headers-(.*)\\.deb",
 +    "kernel_arch_regex":null,
 +    "supported_arches":["i386","amd64"],
