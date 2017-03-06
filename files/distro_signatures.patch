@@ -1,6 +1,6 @@
---- distro_signatures.json	2016-10-13 01:14:42.425173603 -0400
-+++ modified.json	2016-10-13 01:14:21.004964289 -0400
-@@ -420,6 +420,22 @@
+--- backup_distro_signatures.json2	2017-03-06 09:30:48.656105105 +0800
++++ backup_distro_signatures.json	2017-03-06 09:33:46.629209457 +0800
+@@ -420,6 +420,54 @@
      "kernel_options":"",
      "kernel_options_post":"",
      "boot_files":[]
@@ -8,7 +8,39 @@
 +   "xenial": {
 +    "signatures":["dists", ".disk"],
 +    "version_file":"Release|mini-info",
-+    "version_file_regex":"Codename: xenial|Ubuntu 16(.*)",
++    "version_file_regex":"Codename: xenial|Ubuntu 16.04",
++    "kernel_arch":"linux-headers-(.*)\\.deb",
++    "kernel_arch_regex":null,
++    "supported_arches":["i386","amd64"],
++    "supported_repo_breeds":["apt"],
++    "kernel_file":"linux(.*)",
++    "initrd_file":"initrd(.*)\\.gz",
++    "isolinux_ok":false,
++    "default_kickstart":"/var/lib/cobbler/kickstarts/sample.seed",
++    "kernel_options":"",
++    "kernel_options_post":"",
++    "boot_files":[]
++   },
++   "yakkety": {
++    "signatures":["dists", ".disk"],
++    "version_file":"Release|mini-info",
++    "version_file_regex":"Codename: yakkety|Ubuntu 16.10",
++    "kernel_arch":"linux-headers-(.*)\\.deb",
++    "kernel_arch_regex":null,
++    "supported_arches":["i386","amd64"],
++    "supported_repo_breeds":["apt"],
++    "kernel_file":"linux(.*)",
++    "initrd_file":"initrd(.*)\\.gz",
++    "isolinux_ok":false,
++    "default_kickstart":"/var/lib/cobbler/kickstarts/sample.seed",
++    "kernel_options":"",
++    "kernel_options_post":"",
++    "boot_files":[]
++   },
++   "zesty": {
++    "signatures":["dists", ".disk"],
++    "version_file":"Release|mini-info",
++    "version_file_regex":"Codename: yakkety|Ubuntu 17.04",
 +    "kernel_arch":"linux-headers-(.*)\\.deb",
 +    "kernel_arch_regex":null,
 +    "supported_arches":["i386","amd64"],
