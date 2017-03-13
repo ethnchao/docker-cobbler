@@ -25,6 +25,7 @@ RUN yum -y install epel-release \
 
 ADD files/ubuntu-server.seed /var/lib/cobbler/kickstarts/ubuntu-server.seed
 ADD files/post_install_network_config_deb /var/lib/cobbler/snippets/post_install_network_config_deb
+ADD files/post_install_mtenance_publickey /var/lib/cobbler/snippets/post_install_mtenance_publickey
 ADD files/distro_signatures.patch /tmp/distro_signatures.patch
 RUN systemctl enable cobblerd httpd dhcpd \
     && cp /var/lib/cobbler/distro_signatures.json /var/lib/cobbler/backup_distro_signatures.json \
