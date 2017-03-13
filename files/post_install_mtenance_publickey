@@ -1,0 +1,7 @@
+# Post Install: Add Maintenance public key for root user
+cd /root
+mkdir --mode=700 .ssh
+cat >> .ssh/authorized_keys << "PUBLIC_KEY"
+ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAwZ2veoBhW9TwsGG5RhPkkT0CHtChklySAJU6VhSimyT3oR89gJ6a+E61rxVePiOZX77P53t0kE8HNsPj1m5bomL0sdHStLenXN7pWF2AvzV+KHoUP2TAJqK/MIp5rSgz3qNpVqP47eBUdyBgFhIfycRnBlaB/OQLv+tzu6gDyHcyKd8qNBHzzaGxAMTRKdXUF4DeK3Q+4i4Pfdapx1a8KsQv5KTqtDhV9Qi0qNJlOI2IVEjfohWpRTjK4i1Zw4OaF5sSquGhvBNJEzYjELfEu0+77dCe29+R7rhiqDhqI9My1uHE8hfVWqR4PuMhXmUxqTcQsJUyJtVcvhUTp+qS5w== irm@ansbbler
+PUBLIC_KEY
+chmod 600 .ssh/authorized_keys
