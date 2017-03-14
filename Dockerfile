@@ -23,16 +23,21 @@ RUN yum -y install epel-release \
         xinetd \
     && yum clean all
 
-ADD files/ubuntu-server.seed /var/lib/cobbler/kickstarts/ubuntu-server.seed
 ADD files/post_install_network_config_deb /var/lib/cobbler/snippets/post_install_network_config_deb
 ADD files/post_install_mtenance_publickey /var/lib/cobbler/snippets/post_install_mtenance_publickey
+ADD files/post_install_apt_packages /var/lib/cobbler/snippets/post_install_apt_packages
+ADD files/preseed_late_default /var/lib/cobbler/scripts/preseed_late_default
 ADD files/distro_signatures.patch /tmp/distro_signatures.patch
 RUN systemctl enable cobblerd httpd dhcpd \
+    && cp /var/lib/cobbler/kickstarts/sample.seed /var/lib/cobbler/kickstarts/sample_oribak.seed \
+    && cp /var/lib/cobbler/kickstarts/sample_end.ks /var/lib/cobbler/kickstarts/sample_oribak.ks \
     && cp /var/lib/cobbler/distro_signatures.json /var/lib/cobbler/backup_distro_signatures.json \
     && patch --binary /var/lib/cobbler/distro_signatures.json < /tmp/distro_signatures.patch \
     && rm -f /tmp/distro_signatures.patch \
     && sed -i -e 's/\(.*disable.*=\) yes/\1 no/' /etc/xinetd.d/tftp \
     && touch /etc/xinetd.d/rsync
+ADD files/ubuntu-server.seed /var/lib/cobbler/kickstarts/sample.seed
+ADD files/sample_end.ks /var/lib/cobbler/kickstarts/sample_end.ks
 
 RUN ln -sf "/usr/share/zoneinfo/Asia/Shanghai" /etc/localtime
 

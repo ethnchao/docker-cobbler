@@ -1,0 +1,2 @@
+# Post Install: install Python 2 for Ansible
+apt-get install -y python
