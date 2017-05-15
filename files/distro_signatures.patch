@@ -40,7 +40,7 @@
 +   "zesty": {
 +    "signatures":["dists", ".disk"],
 +    "version_file":"Release|mini-info",
-+    "version_file_regex":"Codename: yakkety|Ubuntu 17.04",
++    "version_file_regex":"Codename: zesty|Ubuntu 17.04",
 +    "kernel_arch":"linux-headers-(.*)\\.deb",
 +    "kernel_arch_regex":null,
 +    "supported_arches":["i386","amd64"],
