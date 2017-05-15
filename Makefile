@@ -27,7 +27,7 @@ clean:
 	@docker rm cobbler > /dev/null || true
 
 mount:
-	mkdir dist/mnt/$(NAME) && sudo mount -t iso9660 -o loop,ro -v $(shell pwd)/dist/$(NAME).iso dist/mnt/$(NAME)
+	mkdir -p dist/mnt/$(NAME) && sudo mount -t iso9660 -o loop,ro -v $(shell pwd)/dist/$(NAME).iso dist/mnt/$(NAME)
 
 umount:
 	sudo umount dist/mnt/$(NAME)
